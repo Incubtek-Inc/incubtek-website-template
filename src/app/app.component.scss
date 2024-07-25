@@ -19,3 +19,25 @@
 .wrapper_overlay:hover .overlay {
   height: 100%;
 }
+
+.outer {
+  padding: 10px;
+  overflow-y: hidden;
+  // width: 400px;
+  height: 90%;
+  // border: 1px solid blue;
+}
+.flex-container {
+  overflow-x: auto;
+  height: calc(100% + 17px);
+  padding-bottom: 17px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.card {
+  flex: 1;
+  height: 400px;
+  display: inline-block;
+  margin: 5px;
+  // border: 1px solid;
+}
