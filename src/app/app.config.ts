@@ -15,7 +15,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideClientHydration(),
+    // provideClientHydration(),
     {
       provide: APP_INITIALIZER,
       useFactory: initializeSplashScreen,
