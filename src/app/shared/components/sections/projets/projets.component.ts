@@ -3,11 +3,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-kom-hero-banner',
+  selector: 'app-kom-projets',
   standalone: true,
   imports: [MatIconModule, MatButtonModule],
-  templateUrl: './hero-banner.component.html',
-  styleUrl: './hero-banner.component.scss',
-  host: { ngSkipHydration: 'true' },
+  templateUrl: './projets.component.html',
+  styleUrl: './projets.component.scss',
 })
-export class HeroBannerComponent {}
+export class ProjetsComponent {}

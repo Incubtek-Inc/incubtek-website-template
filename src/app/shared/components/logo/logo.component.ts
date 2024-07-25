@@ -2,7 +2,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-logo',
+  selector: 'app-kom-logo',
   standalone: true,
   imports: [NgOptimizedImage],
   template: `
@@ -12,6 +12,7 @@ import { Component } from '@angular/core';
         width="50"
         height="52"
         alt="logo de komnayah"
+        priority
       />
     </div>
   `,

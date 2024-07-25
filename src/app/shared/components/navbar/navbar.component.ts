@@ -8,7 +8,7 @@ import { LogoComponent } from '../logo/logo.component';
 import { MENUS } from '../../constants/nabbar-menu';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-kom-navbar',
   standalone: true,
   imports: [
     CommonModule,

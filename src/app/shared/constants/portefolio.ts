@@ -1,4 +1,4 @@
-import { PorteFolio } from '../interfaces/portefolio';
+import { PorteFolio } from '@shared/interfaces/portefolio';
 
 export const PORTEFOLIO: PorteFolio[] = [
   {

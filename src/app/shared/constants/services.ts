@@ -1,4 +1,4 @@
-import { Services } from '../interfaces/services';
+import { Services } from '@shared/interfaces/services';
 
 export const SERVICES: Services[] = [
   {

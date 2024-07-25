@@ -2,7 +2,7 @@
   <div class="container mx-auto px-4">
     <div class="flex items-center justify-between py-3">
 
-      <app-logo />
+      <app-kom-logo />
 
       <button id="menu-toggle" class="md:hidden focus:outline-none z-50">
         <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -31,7 +31,7 @@
             </a>
 
             @if(menu.children) {
-            <div class="dropdown-content" [ngClass]="menu.key === 'agency' ? 'w-[200px]' : 'w-[300px] top-[40px]'">
+            <div class="dropdown-content" [ngClass]="menu.key === 'agency' ? 'w-[200px]' : 'w-[300px] z-0'">
               <ng-container *ngTemplateOutlet="dropdownMenuContent; context: {submenu: menu.children}"></ng-container>
             </div>
             }
