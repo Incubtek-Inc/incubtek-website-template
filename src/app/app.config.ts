@@ -4,24 +4,24 @@ import {
   provideZoneChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-
-import { routes } from './app.routes';
+import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideClientHydration } from '@angular/platform-browser';
-import { SplashScreenService } from './core/services/splash-screen.service';
-import { initializeSplashScreen } from './core/utils/initialize-spash-screen';
+
+import { initializeSplashScreen } from '@core/utils/initialize-spash-screen';
+import { SplashScreenService } from '@core/services/splash-screen.service';
+import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    // provideClientHydration(),
+    provideClientHydration(),
     {
       provide: APP_INITIALIZER,
       useFactory: initializeSplashScreen,
       deps: [SplashScreenService],
       multi: true,
     },
-    provideAnimationsAsync(),
+    provideAnimations(),
   ],
 };

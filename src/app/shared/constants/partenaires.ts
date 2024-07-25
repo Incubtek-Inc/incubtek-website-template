@@ -1,4 +1,4 @@
-import { Partenaires } from '../interfaces/partenaires';
+import { Partenaires } from '@shared/interfaces/partenaires';
 
 export const PARTENAIRES: Partenaires[] = [
   {

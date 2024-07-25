@@ -1,4 +1,4 @@
-import { Equipes } from '../interfaces/equipes';
+import { Equipes } from '@shared/interfaces/equipes';
 
 export const EQUIPES: Equipes[] = [
   {

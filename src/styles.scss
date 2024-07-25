@@ -20,3 +20,50 @@ html,
 body {
   height: 100%;
 }
+
+.wrapper_overlay {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #00000080;
+  opacity: 2;
+  overflow: hidden;
+  height: 150px;
+  transition: 0.5s ease;
+  padding: 10px;
+}
+
+.wrapper_overlay:hover .overlay {
+  height: 100%;
+}
+
+.outer {
+  padding: 10px;
+  overflow-y: hidden;
+  height: 90%;
+}
+.flex-container {
+  overflow-x: auto;
+  height: calc(100% + 17px);
+  padding-bottom: 17px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.flex-container::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+.flex-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.card {
+  flex: 1;
+  height: 400px;
+  display: inline-block;
+  margin: 5px;
+}

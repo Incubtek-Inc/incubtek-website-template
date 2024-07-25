@@ -1,44 +1,60 @@
+import { Component, inject, NgZone, OnInit, PLATFORM_ID } from '@angular/core';
 import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnDestroy,
-  ViewChild,
-} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { HeroBannerComponent } from './shared/components/hero-banner/hero-banner.component';
-import { SERVICES } from './shared/constants/services';
-import { CommonModule } from '@angular/common';
-import { PARTENAIRES } from './shared/constants/partenaires';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { PORTEFOLIO } from './shared/constants/portefolio';
-import { ARTICLES } from './shared/constants/articles';
-import { EQUIPES } from './shared/constants/equipes';
+  ChildrenOutletContexts,
+  NavigationEnd,
+  Router,
+  RouterOutlet,
+} from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
+import { IStaticMethods } from 'preline/preline';
+
+import { FooterComponent } from '@shared/components/footer/footer.component';
+import { HeroBannerComponent } from '@shared/components/hero-banner/hero-banner.component';
+import { NavbarComponent } from '@shared/components/navbar/navbar.component';
+import { slideInAnimation } from './animations';
+
+declare global {
+  interface Window {
+    HSStaticMethods: IStaticMethods;
+  }
+}
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule,
     RouterOutlet,
     NavbarComponent,
     HeroBannerComponent,
-    MatIconModule,
-    MatButtonModule,
+    FooterComponent,
   ],
+  animations: [slideInAnimation],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'komnayah';
+export class AppComponent implements OnInit {
+  private router = inject(Router);
+  private platformId = inject(PLATFORM_ID);
+  private ngZone = inject(NgZone);
+  private contexts = inject(ChildrenOutletContexts);
 
-  services = SERVICES;
-  partenaires = PARTENAIRES;
-  portefolios = PORTEFOLIO;
-  articles = ARTICLES;
-  equipes = EQUIPES;
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.router.events.subscribe((event: any) => {
+        if (event instanceof NavigationEnd) {
+          this.ngZone.runOutsideAngular(() => {
+            setTimeout(() => {
+              window.HSStaticMethods.autoInit();
+            }, 100);
+          });
+        }
+      });
+    }
+  }
 
-  cards = Array(100).fill('card');
+  getRouteAnimationData() {
+    return this.contexts.getContext('primary')?.route?.snapshot?.data?.[
+      'animation'
+    ];
+  }
 }

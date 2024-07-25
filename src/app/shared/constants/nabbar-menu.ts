@@ -1,4 +1,4 @@
-import { Menu } from '../interfaces/navbar-menu';
+import { Menu } from '@shared/interfaces/navbar-menu';
 
 export const MENUS: Menu[] = [
   {

@@ -1,0 +1,56 @@
+<section class="relative overflow-hidden w-full max-h-max bg-kom-black">
+  <article class="container mx-auto px-4 py-8">
+    <div class="flex justify-between flex-col gap-2  mb-5 max-md:items-center md:flex-row">
+      <div>
+        <h4 class="font-dalekPinpoint text-white  max-md:text-center">PORTFOLIO</h4>
+        <p class="text-kom-gray w-[400px] max-md:m-auto">
+          At labore magni ex fuga voluptatum ut rerum cumque eum culpa delectus sit velit voluptatem
+        </p>
+      </div>
+
+      <div>
+        <button type="button"
+          class="flex items-baseline text-center border-l-0 border-r-0 border border-kom-orange text-kom-orange px-10 py-2">
+          <span>
+            Voir plus
+          </span>
+          <span class="relative top-1">
+            <mat-icon aria-hidden="false" aria-label="adaptive icon menu" fontIcon="arrow_outward"></mat-icon>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-rows-1 grid-cols-1 lg:grid lg:grid-rows-1 lg:grid-cols-3 mt-10 gap-10">
+      @for (portefolio of portefolios; track portefolio) {
+      <div class="wrapper_overlay">
+        <div>
+          <img [src]="portefolio.src" alt="logo du porte folio" class="w-full h-[650px] block">
+        </div>
+
+        <div class="overlay w-full hover:p-2">
+          <div class="flex justify-between mt-2">
+            <div class="flex flex-col mb-2">
+              <span class="text-white text-2xl">
+                {{portefolio.title}}
+              </span>
+              <span class="uppercase text-kom-orange">
+                {{portefolio.subtitle}}
+              </span>
+            </div>
+
+            <div>
+              <button class="text-kom-orange" mat-icon-button>
+                <mat-icon aria-hidden="false" aria-label="adaptive icon menu" fontIcon="arrow_outward"></mat-icon>
+              </button>
+            </div>
+          </div>
+          <span class="text-kom-gray">
+            {{portefolio.description}}
+          </span>
+        </div>
+      </div>
+      }
+    </div>
+  </article>
+</section>
