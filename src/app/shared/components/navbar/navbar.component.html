@@ -1,0 +1,62 @@
+<header id="main-header" class="bg-kom-black text-white fixed w-full top-0 z-50 transition-all duration-300">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between py-3">
+
+      <app-logo />
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none z-50">
+        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <nav
+        class="flex items-baseline fixed inset-y-0 right-0 transform translate-x-full md:relative md:translate-x-0 bg-gray-800 md:bg-transparent w-64 md:w-auto h-full md:h-auto overflow-y-auto md:overflow-visible transition-transform duration-300 ease-in-out md:transition-none">
+        <ul class="pt-16 md:pt-0 px-4 md:px-0 md:flex space-y-2 md:space-y-0 md:space-x-4">
+          @for (menu of menus; track menu) {
+          <li class="dropdown">
+            <a [href]="menu.path" class="flex gap-2 py-2 md:py-0 hover:text-gray-300 transition duration-200">
+              {{menu.title}}
+
+              @if(menu.icon) {
+              <span>
+                <mat-icon aria-hidden="false" aria-label="adaptive icon menu" [fontIcon]="menu.icon"></mat-icon>
+              </span>
+              }
+            </a>
+
+            @if(menu.children) {
+            <div class="dropdown-content" [ngClass]="menu.key === 'agency' ? 'w-[200px]' : 'w-[300px] top-[40px]'">
+              <ng-container *ngTemplateOutlet="dropdownMenuContent; context: {submenu: menu.children}"></ng-container>
+            </div>
+            }
+          </li>
+          }
+        </ul>
+
+        <button mat-raised-button
+          class="ml-5 flex items-baseline text-center text-lg rounded-none bg-kom-orange text-white">
+          <span>
+            Contactez-nous
+          </span>
+          <span class="relative top-1">
+            <mat-icon aria-hidden="false" aria-label="adaptive icon menu" fontIcon="arrow_outward"></mat-icon>
+          </span>
+        </button>
+      </nav>
+
+      <ng-template #dropdownMenuContent let-submenu="submenu">
+        @for (menu of submenu; track menu) {
+        <a [href]="menu.path" class="flex gap-2 py-2 md:py-0 hover:text-kom-orange transition duration-200">
+          {{menu.title}}
+        </a>
+        }
+      </ng-template>
+    </div>
+  </div>
+</header>
