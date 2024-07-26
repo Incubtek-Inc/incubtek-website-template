@@ -1,9 +1,10 @@
-<section class="relative overflow-hidden w-full max-h-max">
+<section class="relative overflow-hidden w-full max-h-max" [ngStyle]="setStyle?.['wrapper']">
   <article class="container mx-auto px-4 py-8">
     <div class="flex justify-between flex-col gap-2  mb-5 max-md:items-center md:flex-row ">
       <div>
-        <h4 class="font-dalekPinpoint text-kom-black  max-md:text-center">Nos équipes créative <span
-            class="text-kom-orange font-dalekPinpoint">“Les
+        <h4 class="font-dalekPinpoint text-kom-black  max-md:text-center"
+          [ngClass]="setStyle?.['title'] ? 'text-white' : 'text-kom-black'">Nos équipes
+          créative <span class="text-kom-orange font-dalekPinpoint">“Les
             Nayah”</span>
         </h4>
         <p class="text-kom-gray w-[400px] max-md:m-auto">

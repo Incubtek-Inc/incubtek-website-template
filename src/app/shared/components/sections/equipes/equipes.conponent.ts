@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -12,4 +12,6 @@ import { EQUIPES } from '../../../constants/equipes';
 })
 export class EquipesComponent {
   equipes = EQUIPES;
+
+  @Input() setStyle: Record<string, any> | null = null;
 }

@@ -9,6 +9,7 @@ import { provideClientHydration } from '@angular/platform-browser';
 
 import { initializeSplashScreen } from '@core/utils/initialize-spash-screen';
 import { SplashScreenService } from '@core/services/splash-screen.service';
+
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {

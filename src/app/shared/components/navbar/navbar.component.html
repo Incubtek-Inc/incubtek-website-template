@@ -31,7 +31,7 @@
             </a>
 
             @if(menu.children) {
-            <div class="dropdown-content" [ngClass]="menu.key === 'agency' ? 'w-[200px]' : 'w-[300px] z-0'">
+            <div class="dropdown-content" [ngClass]="menu.key === 'agency' ? 'w-[200px]' : 'w-[400px] z-0'">
               <ng-container *ngTemplateOutlet="dropdownMenuContent; context: {submenu: menu.children}"></ng-container>
             </div>
             }
@@ -52,7 +52,8 @@
 
       <ng-template #dropdownMenuContent let-submenu="submenu">
         @for (menu of submenu; track menu) {
-        <a [href]="menu.path" class="flex gap-2 py-2 md:py-0 hover:text-kom-orange transition duration-200">
+        <a [href]="menu.path"
+          class="flex gap-2 py-2 md:py-0 hover:text-kom-orange hover:font-dalekPinpoint transition duration-200">
           {{menu.title}}
         </a>
         }
