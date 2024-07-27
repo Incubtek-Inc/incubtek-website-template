@@ -2,6 +2,14 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: 'contact-us',
+    loadComponent: () =>
+      import('./views//contact/contact.component').then(
+        (m) => m.ContactComponent
+      ),
+    data: { animation: 'contactPage' },
+  },
+  {
     path: 'about-us',
     loadComponent: () =>
       import('./views/decouverte/decouverte.component').then(

@@ -1,12 +1,12 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
+// import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-kom-logo',
   standalone: true,
-  imports: [NgOptimizedImage, MatButtonModule, RouterLink],
+  imports: [NgOptimizedImage, RouterLink],
   template: `
     <div class="flex items-center">
       <button type="button" routerLink="/home">

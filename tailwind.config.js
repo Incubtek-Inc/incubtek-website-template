@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
-  important: true,
+  // important: true,
   content: ["./src/**/*.{html,js}", "./node_modules/preline/dist/preline.js"],
   theme: {
     extend: {
@@ -9,6 +9,7 @@ module.exports = {
         "kom-orange": "#F3742D",
         "kom-gray": "#808080",
         "kom-black": "#0A0A0A",
+        "kom-gray-hue": "#4D4D4D",
       },
       fontFamily: {
         dalekPinpoint: ["Dalek Pinpoint", "serif"],
