@@ -1,10 +1,13 @@
-<div class="bg-kom-aboutUs bg-no-repeat bg-cover bg-center h-[55rem] w-full py-1"></div>
+<div
+  class="bg-kom-aboutUs bg-no-repeat bg-contain bg-kom-black bg-top lg:h-[30rem] md:h-[20rem] xl:h-[40rem] h-[10rem] py-1">
+</div>
 
 <div class="container mx-auto px-4">
-  <div class="grid grid-cols-2 grid-rows-1 gap-4 mb-20 mt-20 w-full">
+  <div class="grid xl:grid-cols-2 grid-cols-1 grid-rows-1 gap-4 mb-20 md:mt-20 mt-10 w-full">
     <div>
-      <h3 class="font-dalekPinpoint text-kom-orange text-3xl mb-3">PRESENTATION DE KOMNAYAH</h3>
-      <div class="w-[50rem] mb-10">
+      <h3 class="font-dalekPinpoint text-kom-orange text-3xl mb-3 xl:text-left text-center">PRESENTATION DE KOMNAYAH
+      </h3>
+      <div class="xl:w-[50rem] w-auto mb-10">
         <p class="mb-2">
           At labore magni ex fuga voluptatum ut rerum cumque eum culpa delectus sit velit voluptatem ex sapiente autem
           33 incidunt omnis. Ad internos dolore et eaque nobis a ipsam obcaecati non dicta impedit eos porro ducimus est
@@ -35,16 +38,31 @@
       <app-custom-button label="Contactez-nous" link="/contact-us" hasIcon></app-custom-button>
     </div>
 
-    <div class="w-full flex justify-center items-center flex-col">
+    <div class="w-full xl:flex xl:justify-center xl:items-center xl:flex-col hidden">
       <img src="assets/images/frame_001.jpg" height="80" width="200" alt="image de presentation" />
     </div>
   </div>
 </div>
-
 <app-kom-services />
 
 <div class=" mx-auto bg-kom-methode bg-no-repeat h-[40rem] bg-contain mt-3 bg-top"></div>
 
 <app-kom-equipes [setStyle]="setStyle" />
 <app-kom-projets />
-<app-kom-footer />
+
+<app-kom-footer>
+  <div ngProjectAs="[footer-content]">
+    <div class="justify-start items-center gap-3.5 inline-flex">
+      <div class="flex items-center">
+        <p class="mr-2 hidden lg:inline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="2" viewBox="0 0 50 2" fill="none">
+            <path d="M0 0.620117H50" stroke="white" />
+          </svg>
+        </p>
+        <div class="text-white text-4xl font-bold font-dalekPinpoint lowercase">
+          {{"contact@komnayah.ci"}}
+        </div>
+      </div>
+    </div>
+  </div>
+</app-kom-footer>

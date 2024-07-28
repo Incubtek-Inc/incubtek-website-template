@@ -8,19 +8,19 @@ export const MENUS: Menu[] = [
     children: [
       {
         title: 'Notre histoire',
-        path: '',
+        path: '/about-us',
       },
       {
         title: 'Notre methode',
-        path: '',
+        path: '/about-us',
       },
       {
         title: 'Nos valeurs',
-        path: '',
+        path: '/about-us',
       },
       {
         title: 'Notre équipe',
-        path: '',
+        path: '/about-us',
       },
     ],
   },
@@ -63,7 +63,7 @@ export const MENUS: Menu[] = [
   {
     title: 'Blog',
     key: 'blog',
-    path: '',
+    path: '/blogs',
   },
   // {
   //   title: 'Contactez-nous',

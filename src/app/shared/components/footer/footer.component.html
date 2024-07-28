@@ -1,24 +1,21 @@
 <footer class="relative overflow-hidden w-full max-h-max bg-kom-black bg-kom-footer-pattern bg-no-repeat bg-cover">
-  <article class="container mx-auto px-4 py-8">
-
+  <article class="container mx-auto px-4 py-9">
     <div class="flex justify-between items-center max-md:flex-col">
       <div class="text-white max-md:mb-5">
-        <div class="w-96  text-kom-orange text-8xl font-normal leading-10">“</div>
-        <div class="w-96 text-white text-xl font-medium leading-tight">Nous désirons donner le
+        <div class="md:w-96 w-auto  text-kom-orange text-8xl font-normal leading-10">“</div>
+        <div class="md:w-96 w-auto text-white text-xl font-medium leading-tight">Nous désirons donner le
           nouvel élan à votre business, pour votre bonheur et le profit de tous.</div>
       </div>
 
       <div class="text-white">
-        <div class="h-36 flex-col justify-start items-end gap-12 inline-flex">
-          <div class="justify-start items-center gap-3.5 inline-flex">
-            <div class="text-white text-4xl font-bold font-dalekPinpoint lowercase">
-              {{"contact@komnayah.ci"}}
-            </div>
-          </div>
+        <div class="h-36 flex-col justify-start items-end inline-flex">
+          <ng-content select="[footer-content]"></ng-content>
 
-          <div class="justify-start items-center gap-3.5 inline-flex">
-            <div class="justify-start items-center gap-3.5 flex">
-              <div class="text-white text-base font-normal lowercase max-md:text-[15px]">Réseaux sociaux</div>
+          <!-- <div class="justify-start items-center gap-3.5 inline-flex"> -->
+          <div class="flex py-5 gap-5">
+            <div class="md:flex md:items-center hidden">
+              <div class="text-white text-base font-normal lowercase max-md:text-[15px] mr-0 md:mr-2">Réseaux sociaux
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" width="51" height="2" viewBox="0 0 51 2" fill="none">
                 <path d="M0.0214844 1.16309H50.0215" stroke="white" />
               </svg>

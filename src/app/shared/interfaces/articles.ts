@@ -1,4 +1,5 @@
 export interface Articles {
+  id: number;
   src: string;
   date: string;
   author: string;

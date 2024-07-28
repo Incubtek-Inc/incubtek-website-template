@@ -3,6 +3,52 @@
 <app-kom-partenaires />
 <app-kom-portefolio />
 <app-kom-equipes />
-<app-kom-articles />
+
+<app-kom-articles>
+  <div ngProjectAs="[article-header]">
+    <div class="flex justify-between flex-col gap-2  mb-5 max-md:items-center md:flex-row ">
+      <div>
+        <h4 class="font-dalekPinpoint text-white max-md:text-center text-3xl">Nos récents articles
+        </h4>
+        <p class="text-kom-gray md:w-[400px] w-auto">
+          At labore magni ex fuga voluptatum ut rerum cumque eum culpa delectus sit velit voluptatem
+        </p>
+      </div>
+
+      <div>
+        <button type="button" routerLink="/blogs"
+          class="flex items-baseline text-center border-l-0 border-r-0 border border-kom-orange text-kom-orange px-10 py-2">
+          <span>
+            Voir plus
+          </span>
+          <span class="relative top-1">
+            <!-- <mat-icon aria-hidden="false" aria-label="adaptive icon menu" fontIcon="arrow_outward"></mat-icon> -->
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <img src="assets/images/articles/articles.png" class="w-full" alt="">
+    </div>
+  </div>
+</app-kom-articles>
+
 <app-kom-projets />
-<app-kom-footer />
+
+<app-kom-footer>
+  <div ngProjectAs="[footer-content]">
+    <div class="justify-start items-center gap-3.5 inline-flex">
+      <div class="flex items-center">
+        <p class="mr-2 hidden lg:inline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="2" viewBox="0 0 50 2" fill="none">
+            <path d="M0 0.620117H50" stroke="white" />
+          </svg>
+        </p>
+        <div class="text-white text-4xl font-bold font-dalekPinpoint lowercase">
+          {{"contact@komnayah.ci"}}
+        </div>
+      </div>
+    </div>
+  </div>
+</app-kom-footer>

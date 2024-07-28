@@ -196,4 +196,19 @@
   </div>
 </div>
 
-<app-kom-footer />
+<app-kom-footer>
+  <div ngProjectAs="[footer-content]">
+    <div class="justify-start items-center gap-3.5 inline-flex">
+      <div class="flex items-center">
+        <p class="mr-2 hidden lg:inline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="2" viewBox="0 0 50 2" fill="none">
+            <path d="M0 0.620117H50" stroke="white" />
+          </svg>
+        </p>
+        <div class="text-white text-4xl font-bold font-dalekPinpoint lowercase">
+          {{"contact@komnayah.ci"}}
+        </div>
+      </div>
+    </div>
+  </div>
+</app-kom-footer>

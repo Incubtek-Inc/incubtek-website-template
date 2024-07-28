@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { FooterComponent } from '@shared/components/footer/footer.component';
 
 import { HeroBannerComponent } from '@shared/components/hero-banner/hero-banner.component';
@@ -21,6 +22,7 @@ import { ServicesComponent } from '@shared/components/sections/services/services
     ArticlesComponent,
     ProjetsComponent,
     FooterComponent,
+    RouterLink,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',

@@ -2,6 +2,10 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: 'blogs',
+    loadChildren: () => import('./views/blogs/blogs.routes'),
+  },
+  {
     path: 'contact-us',
     loadComponent: () =>
       import('./views//contact/contact.component').then(

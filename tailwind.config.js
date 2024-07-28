@@ -23,6 +23,8 @@ module.exports = {
         "kom-aboutUs": "url('assets/images/about_us.png')",
         "kom-methode": "url('assets/images/methode.jpg')",
         "kom-framePresentation": "url('assets/images/presentation_frame.jpg')",
+        "kom-blogs": "url('assets/images/blog_bg.png')",
+        "kom-blogsDetail": "url('assets/images/blog_detail.jpg')",
 
         //pattern
         "kom-service-pattern": "url('assets/images/service_bg.png')",
