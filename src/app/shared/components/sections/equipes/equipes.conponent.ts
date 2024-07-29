@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+// import { MatIconModule } from '@angular/material/icon';
 
 import { EQUIPES } from '../../../constants/equipes';
 
@@ -8,8 +8,10 @@ import { EQUIPES } from '../../../constants/equipes';
   selector: 'app-kom-equipes',
   templateUrl: './equipes.component.html',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule],
 })
 export class EquipesComponent {
   equipes = EQUIPES;
+
+  @Input() setStyle: Record<string, any> | null = null;
 }

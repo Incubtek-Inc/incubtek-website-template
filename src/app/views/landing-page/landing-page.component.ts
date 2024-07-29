@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { FooterComponent } from '@shared/components/footer/footer.component';
 
+import { HeroBannerComponent } from '@shared/components/hero-banner/hero-banner.component';
 import { ArticlesComponent } from '@shared/components/sections/articles/articles.component';
 import { EquipesComponent } from '@shared/components/sections/equipes/equipes.conponent';
 import { PartenairesComponent } from '@shared/components/sections/partenaires/partenaires.component';
@@ -11,12 +14,15 @@ import { ServicesComponent } from '@shared/components/sections/services/services
   selector: 'app-landing-page',
   standalone: true,
   imports: [
+    HeroBannerComponent,
     ServicesComponent,
     PartenairesComponent,
     PortefolioComponent,
     EquipesComponent,
     ArticlesComponent,
     ProjetsComponent,
+    FooterComponent,
+    RouterLink,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',

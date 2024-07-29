@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { booleanAttribute, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
 
 import { ARTICLES } from '../../../constants/articles';
+import { Articles } from '@shared/interfaces/articles';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-kom-articles',
   templateUrl: './articles.component.html',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, RouterLink],
 })
 export class ArticlesComponent {
-  articles = ARTICLES;
+  @Input() articles: Articles[] = ARTICLES;
 }
