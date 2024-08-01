@@ -31,27 +31,27 @@ export const MENUS: Menu[] = [
     children: [
       {
         title: 'Digital',
-        path: '',
+        path: '/nos-services',
       },
       {
         title: 'Médias et relations publiques',
-        path: '',
+        path: '/nos-services',
       },
       {
         title: 'Productions',
-        path: '',
+        path: '/nos-services',
       },
       {
         title: 'Évènementiel',
-        path: '',
+        path: '/nos-services',
       },
       {
         title: 'Conseils et statrégies',
-        path: '',
+        path: '/nos-services',
       },
       {
         title: 'Veille et Data',
-        path: '',
+        path: '/nos-services',
       },
     ],
   },

@@ -2,9 +2,13 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: 'nos-services',
+    loadChildren: () => import('./views/nos-services/nos-services.routes'),
+  },
+  {
     path: 'portefolio',
     loadComponent: () =>
-      import('./views//portefolio/portefolio.component').then(
+      import('./views/portefolio/portefolio.component').then(
         (m) => m.PortefolioComponent
       ),
     data: { animation: 'portefolioPage' },
@@ -16,7 +20,7 @@ export const routes: Routes = [
   {
     path: 'contact-us',
     loadComponent: () =>
-      import('./views//contact/contact.component').then(
+      import('./views/contact/contact.component').then(
         (m) => m.ContactComponent
       ),
     data: { animation: 'contactPage' },

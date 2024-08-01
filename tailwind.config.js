@@ -25,6 +25,12 @@ module.exports = {
         "kom-framePresentation": "url('assets/images/presentation_frame.jpg')",
         "kom-blogs": "url('assets/images/blog_bg.png')",
         "kom-blogsDetail": "url('assets/images/blog_detail.jpg')",
+        "kom-services": "url('assets/images/services_bg.jpg')",
+
+        //nos-services
+        "kom-digital": "url('assets/images/nos-services/digital_bg.jpg')",
+        "kom-digitalIllustration":
+          "url('assets/images/nos-services/digital_illustration.jpg')",
 
         //pattern
         "kom-service-pattern": "url('assets/images/service_bg.png')",
