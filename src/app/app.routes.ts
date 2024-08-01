@@ -2,6 +2,14 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: 'portefolio',
+    loadComponent: () =>
+      import('./views//portefolio/portefolio.component').then(
+        (m) => m.PortefolioComponent
+      ),
+    data: { animation: 'portefolioPage' },
+  },
+  {
     path: 'blogs',
     loadChildren: () => import('./views/blogs/blogs.routes'),
   },

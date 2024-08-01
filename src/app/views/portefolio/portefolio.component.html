@@ -1,0 +1,69 @@
+<div class="w-full bg-kom-black">
+  <div class="container mx-auto py-8">
+    <div class="flex justify-center items-center py-8 text-center flex-col">
+      <h3 class="text-white font-dalekPinpoint md:w-[65rem] w-auto md:text-3xl lg:text-5xl text-2xl">Découvrez nos
+        exploits,
+        bâtissons
+        l'avenir ensemble.
+      </h3>
+
+      <div class="w-4 h-4 origin-top-left rotate-45 bg-white mt-10 hidden md:block"></div>
+
+      <div class="mt-10">
+        @if(portefolios) {
+        <nav class="flex md:flex-row flex-col gap-x-14" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+          @for (portfolio of portefolios; track portfolio) {
+          <button type="button" (click)="setActiveTab(portfolio.key)" [class.border-b-2]="activeTab === portfolio.key"
+            [class.border-kom-orange]="activeTab === portfolio.key" [class.hs-tab-active]="activeTab === portfolio.key"
+            [class.text-kom-orange]="activeTab === portfolio.key"
+            [attr.aria-selected]="activeTab === portfolio.key ? 'true' : 'false'" [attr.id]="'tabs-' + portfolio.key"
+            class="text-2xl text-gray-500 hover:text-kom-orange focus:outline-none focus:text-kom-orange disabled:opacity-50 disabled:pointer-events-none active"
+            [attr.aria-controls]="'tabs-' + portfolio.key" role="tab">
+            {{ portfolio.key | uppercase}}
+          </button>
+          }
+        </nav>
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w-full">
+  @if(portefolios) {
+  <div class="md:mt-3 container mx-auto py-8">
+    @for (portfolio of portefolios; track portfolio) {
+    <div [class.hidden]="activeTab !== portfolio.key" [attr.id]="'tabs-' + portfolio.key"
+      [attr.aria-labelledby]="'tabs-' + portfolio.key" role="tabpanel"
+      class="grid md:grid-cols-2 grid-cols-1 grid-rows-1 md:mt-10 mt-0 gap-10">
+      @for (item of portfolio.content; track item) {
+      <div class="md:my-4 md:p-0 p-[10px]">
+        <img [src]="item.src" [alt]="item.title" class="w-full">
+        <div class="mt-2">
+          <p class="text-xl font-semibold">{{ item.title }}</p>
+          <p class="text-gray-500 dark:text-neutral-400">{{ item.description }}</p>
+        </div>
+      </div>
+      }
+    </div>
+    }
+  </div>
+  }
+</div>
+
+<app-kom-footer>
+  <div ngProjectAs="[footer-content]">
+    <div class="justify-start items-center gap-3.5 inline-flex">
+      <div class="flex items-center">
+        <p class="mr-2 hidden lg:inline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="2" viewBox="0 0 50 2" fill="none">
+            <path d="M0 0.620117H50" stroke="white" />
+          </svg>
+        </p>
+        <div class="text-white md:text-4xl text-md font-bold font-dalekPinpoint lowercase">
+          {{"contact@komnayah.ci"}}
+        </div>
+      </div>
+    </div>
+  </div>
+</app-kom-footer>

@@ -55,13 +55,16 @@ body {
   display: flex;
   flex-wrap: nowrap;
 }
-.flex-container::-webkit-scrollbar {
+.flex-container::-webkit-scrollbar,
+.hidden_scroll::-webkit-scrollbar {
   display: none; /* Chrome */
 }
-.flex-container {
+.flex-container,
+.hidden_scroll {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
 .card {
   flex: 1;
   height: 400px;

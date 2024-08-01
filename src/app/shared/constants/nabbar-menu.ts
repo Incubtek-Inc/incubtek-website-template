@@ -58,16 +58,11 @@ export const MENUS: Menu[] = [
   {
     title: 'Portfolio',
     key: 'portfolio',
-    path: '',
+    path: '/portefolio',
   },
   {
     title: 'Blog',
     key: 'blog',
     path: '/blogs',
   },
-  // {
-  //   title: 'Contactez-nous',
-  //   icon: 'north_east',
-  //   path: '',
-  // },
 ];

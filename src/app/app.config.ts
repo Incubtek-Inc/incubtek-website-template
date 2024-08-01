@@ -17,15 +17,18 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(
       routes,
-      withInMemoryScrolling({ anchorScrolling: 'enabled' })
+      withInMemoryScrolling({
+        anchorScrolling: 'enabled',
+        scrollPositionRestoration: 'top',
+      })
     ),
     provideClientHydration(),
+    provideAnimations(),
     {
       provide: APP_INITIALIZER,
       useFactory: initializeSplashScreen,
       deps: [SplashScreenService],
       multi: true,
     },
-    provideAnimations(),
   ],
 };

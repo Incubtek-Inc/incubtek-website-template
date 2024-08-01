@@ -1,6 +1,7 @@
 import { Component, inject, NgZone, OnInit, PLATFORM_ID } from '@angular/core';
 import {
   ChildrenOutletContexts,
+  Event,
   NavigationEnd,
   Router,
   RouterOutlet,
@@ -11,7 +12,7 @@ import { IStaticMethods } from 'preline/preline';
 import { FooterComponent } from '@shared/components/footer/footer.component';
 import { HeroBannerComponent } from '@shared/components/hero-banner/hero-banner.component';
 import { NavbarComponent } from '@shared/components/navbar/navbar.component';
-import { slideInAnimation } from './animations';
+import { slideInAnimation } from '@core/utils/animations';
 
 declare global {
   interface Window {
@@ -39,19 +40,23 @@ export class AppComponent implements OnInit {
   private contexts = inject(ChildrenOutletContexts);
 
   ngOnInit(): void {
+    this.reInitPrelineConfig();
+  }
+
+  reInitPrelineConfig() {
     if (isPlatformBrowser(this.platformId)) {
-      this.router.events.subscribe((event: any) => {
+      this.router.events.subscribe((event: Event) => {
         if (event instanceof NavigationEnd) {
           this.ngZone.runOutsideAngular(() => {
             setTimeout(() => {
-              window.HSStaticMethods.autoInit();
+              window.HSStaticMethods?.autoInit();
             }, 100);
           });
         }
+        window.scrollTo(0, 0);
       });
     }
   }
-
   getRouteAnimationData() {
     return this.contexts.getContext('primary')?.route?.snapshot?.data?.[
       'animation'

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <div class="justify-start items-start gap-2.5 flex">
+    <div class="justify-start items-start gap-3 flex">
       <div class="w-14 h-14 relative">
         <div
           class="w-9 h-9 left-[26.16px] top-0 absolute origin-top-left rotate-45 bg-black border border-white"

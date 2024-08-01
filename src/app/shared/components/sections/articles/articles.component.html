@@ -5,7 +5,7 @@
     <div class="lg:grid lg:grid-cols-5 lg:grid-rows-1 mt-5 gap-3">
       @for (article of articles; track article) {
       <a [routerLink]="['/blogs', article.id, 'details']"
-        class="flex flex-row hover:border-b-2 hover:border-l-2 hover:border-kom-orange hover:transition hover:delay-100">
+        class="flex flex-row hover:border-b-2 hover:border-kom-orange hover:transition hover:delay-200">
         <div class="w-full">
           <div class="bg-cover bg-no-repeat w-full h-[165px] mb-2"
             [ngStyle]="{'background-image': 'url(' + article.src + ')'}">
