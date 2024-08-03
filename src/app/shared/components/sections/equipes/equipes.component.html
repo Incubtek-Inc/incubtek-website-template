@@ -1,29 +1,29 @@
 <section class="relative overflow-hidden w-full max-h-max" [ngStyle]="setStyle?.['wrapper']">
   <article class="container mx-auto px-4 py-8">
     <div class="flex justify-between flex-col gap-2  mb-5 max-md:items-center md:flex-row ">
-      <div>
+      <div class="flex items-center justify-center lg:justify-normal">
+        <p class="mr-2 hidden lg:inline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="51" height="2" viewBox="0 0 51 2" fill="none">
+            <path d="M0.5 1H50.5" [attr.stroke]="strokeColor" />
+          </svg>
+        </p>
         <h4 class="font-dalekPinpoint text-kom-black  max-md:text-center text-3xl"
           [ngClass]="setStyle?.['title'] ? 'text-white' : 'text-kom-black'">Nos équipes
           créative <span class="text-kom-orange font-dalekPinpoint text-3xl">“Les
             Nayah”</span>
         </h4>
-        <p class="text-kom-gray md:w-[400px] w-auto max-md:m-auto">
-          At labore magni ex fuga voluptatum ut rerum cumque eum culpa delectus sit velit voluptatem
-        </p>
       </div>
 
       <div>
-        <button type="button"
-          class="flex items-baseline text-center border-l-0 border-r-0 border border-kom-orange text-kom-orange px-10 py-2">
-          <span>
-            Voir plus
-          </span>
-          <span class="relative top-1">
-            <!-- <mat-icon aria-hidden="false" aria-label="adaptive icon menu" fontIcon="arrow_outward"></mat-icon> -->
-          </span>
-        </button>
+        <a routerLink="/about-us">
+          <app-custom-button label="Voir plus" variant="outlined" hasIcon></app-custom-button>
+        </a>
       </div>
     </div>
+
+    <p class="text-kom-gray lg:w-[65rem] w-auto lg:mt-4 mt-5 lg:ml-12 ml-0 text-center md:text-left">
+      At labore magni ex fuga voluptatum ut rerum cumque eum culpa delectus sit velit voluptatem
+    </p>
 
     <div class="outer">
       <div class='flex-container' #flexContainer>

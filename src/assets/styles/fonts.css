@@ -2,3 +2,8 @@
   font-family: Dalek Pinpoint;
   src: url("../fonts/DalekPinpointBold.ttf") format("opentype");
 }
+
+@font-face {
+  font-family: Mona Sans;
+  src: url("../fonts/Mona-Sans.ttf") format("opentype");
+}

@@ -1,23 +1,26 @@
-import { NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import {
   booleanAttribute,
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
   Component,
   Input,
 } from '@angular/core';
-// import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-custom-button',
   standalone: true,
-  imports: [RouterLink, NgIf],
+  imports: [RouterLink, NgIf, NgClass],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <button
       type="button"
-      class="group relative flex items-center text-lg rounded-none bg-kom-orange text-white hover:font-dalekPinpoint px-5 py-1 group-hover:w-[300px]"
+      class="group relative flex items-center text-lg rounded-none hover:font-dalekPinpoint transition-all duration-300 p-2 py-2"
+      [ngClass]="{
+        'bg-kom-orange text-white': variant === 'contained',
+        'border border-y-2 border-l-0 border-r-0 border-x-0 border-kom-orange text-kom-orange':
+          variant === 'outlined'
+      }"
       [routerLink]="link ?? null"
     >
       {{ label }}
@@ -58,6 +61,7 @@ import { RouterLink } from '@angular/router';
   `,
 })
 export class SharedButtonComponent {
+  @Input() variant: 'outlined' | 'contained' = 'contained';
   @Input({ required: true }) label = '';
   @Input() link: string | undefined = '';
   @Input({ transform: booleanAttribute }) hasIcon = false;

@@ -1,17 +1,33 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-// import { MatIconModule } from '@angular/material/icon';
+import { NgClass, NgStyle } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
-import { EQUIPES } from '../../../constants/equipes';
+import { SharedButtonComponent } from '@shared/components/button.component';
+import { EQUIPES } from '@shared/constants/equipes';
 
 @Component({
   selector: 'app-kom-equipes',
   templateUrl: './equipes.component.html',
   standalone: true,
-  imports: [CommonModule],
+  imports: [SharedButtonComponent, NgClass, NgStyle, RouterLink],
 })
 export class EquipesComponent {
   equipes = EQUIPES;
+  strokeColor: string = '#000000';
 
-  @Input() setStyle: Record<string, any> | null = null;
+  private _setStyle: Record<string, any> | null = null;
+
+  @Input()
+  set setStyle(value: Record<string, any> | null) {
+    this._setStyle = value;
+    this.updateStrokeColor();
+  }
+
+  get setStyle(): Record<string, any> | null {
+    return this._setStyle;
+  }
+
+  private updateStrokeColor() {
+    this.strokeColor = this._setStyle?.['line']?.color || '#000000';
+  }
 }

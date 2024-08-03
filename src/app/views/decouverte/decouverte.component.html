@@ -5,11 +5,18 @@
 <div class="container mx-auto px-4">
   <div class="grid xl:grid-cols-2 grid-cols-1 grid-rows-1 gap-4 mb-20 md:mt-20 mt-10 w-full">
     <div>
-      <h3 class="font-dalekPinpoint text-kom-orange text-3xl mb-3 xl:text-left text-center" id="presentation">
-        PRESENTATION DE KOMNAYAH
-      </h3>
+      <div class="flex items-center justify-center lg:justify-normal">
+        <p class="mr-2 hidden lg:inline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="51" height="2" viewBox="0 0 51 2" fill="none">
+            <path d="M0.5 1H50.5" stroke="#F3742D" />
+          </svg>
+        </p>
+        <h3 class="font-dalekPinpoint text-kom-orange text-3xl mb-3 xl:text-left text-center" id="presentation">
+          PRESENTATION DE KOMNAYAH
+        </h3>
+      </div>
 
-      <div class="xl:w-[50rem] w-auto mb-10">
+      <div class="xl:w-[50rem] w-auto mb-10 md:ml-[55px] ml-0">
         <p class="mb-2">
           At labore magni ex fuga voluptatum ut rerum cumque eum culpa delectus sit velit voluptatem ex sapiente autem
           33 incidunt omnis. Ad internos dolore et eaque nobis a ipsam obcaecati non dicta impedit eos porro ducimus est
@@ -37,11 +44,13 @@
           magnam dignissimos ut placeat dolore.
         </p>
       </div>
-      <app-custom-button label="Contactez-nous" link="/contact-us" hasIcon></app-custom-button>
+      <div class="md:ml-[55px] ml-0">
+        <app-custom-button label="Contactez-nous" link="/contact-us" hasIcon></app-custom-button>
+      </div>
     </div>
 
     <div class="w-full xl:flex xl:justify-center xl:items-center xl:flex-col hidden">
-      <img src="assets/images/frame_001.jpg" height="80" width="200" alt="image de presentation" />
+      <img src="assets/images/presentation_illustration.svg" height="100" width="400" alt="image de presentation" />
     </div>
   </div>
 </div>

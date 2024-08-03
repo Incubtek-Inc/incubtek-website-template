@@ -28,6 +28,9 @@ export class DecouverteComponent {
       title: {
         color: '#fff',
       },
+      line: {
+        color: '#fff',
+      },
     };
   }
 }

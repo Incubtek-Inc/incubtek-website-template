@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { PORTEFOLIO } from '../../../constants/portefolio';
-// import { MatIconModule } from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
+
+import { SharedButtonComponent } from '@shared/components/button.component';
+import { PORTEFOLIO } from '@shared/constants/portefolio';
 
 @Component({
   selector: 'app-kom-portefolio',
   standalone: true,
-  imports: [],
+  imports: [SharedButtonComponent, RouterLink],
   templateUrl: './portefolio.component.html',
   styleUrl: './portefolio.component.scss',
 })

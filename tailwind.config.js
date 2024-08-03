@@ -1,10 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
-  // important: true,
   content: ["./src/**/*.{html,js}", "./node_modules/preline/dist/preline.js"],
   theme: {
     extend: {
+      keyframes: {
+        partnerSlider: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        partnerSlider: "partnerSlider 20s linear infinite",
+        width: "200%",
+      },
       colors: {
         "kom-orange": "#F3742D",
         "kom-gray": "#808080",
@@ -29,6 +38,10 @@ module.exports = {
 
         //nos-services
         "kom-digital": "url('assets/images/nos-services/digital_bg.jpg')",
+        "kom-realisationPattern":
+          "url('assets/images/nos-services/pattern_realisation.png')",
+        "kom-servicePatttern":
+          "url('assets/images/nos-services/pattern_services.png')",
         "kom-digitalIllustration":
           "url('assets/images/nos-services/digital_illustration.jpg')",
 

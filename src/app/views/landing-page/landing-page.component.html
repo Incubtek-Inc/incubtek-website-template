@@ -7,26 +7,25 @@
 <app-kom-articles>
   <div ngProjectAs="[article-header]">
     <div class="flex justify-between flex-col gap-2  mb-5 max-md:items-center md:flex-row ">
-      <div>
-        <h4 class="font-dalekPinpoint text-white max-md:text-center text-3xl">Nos récents articles
-        </h4>
-        <p class="text-kom-gray md:w-[400px] w-auto">
-          At labore magni ex fuga voluptatum ut rerum cumque eum culpa delectus sit velit voluptatem
+      <div class="flex items-center justify-center lg:justify-normal">
+        <p class="mr-2 hidden lg:inline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="51" height="2" viewBox="0 0 51 2" fill="none">
+            <path d="M0.5 1H50.5" stroke="white" />
+          </svg>
         </p>
+        <h4 class="font-dalekPinpoint text-white max-md:text-center text-3xl">Nos récents articles</h4>
       </div>
 
       <div>
-        <button type="button" routerLink="/blogs"
-          class="flex items-baseline text-center border-l-0 border-r-0 border border-kom-orange text-kom-orange px-10 py-2">
-          <span>
-            Voir plus
-          </span>
-          <span class="relative top-1">
-            <!-- <mat-icon aria-hidden="false" aria-label="adaptive icon menu" fontIcon="arrow_outward"></mat-icon> -->
-          </span>
-        </button>
+        <a routerLink="/blogs">
+          <app-custom-button label="Voir plus" variant="outlined" hasIcon></app-custom-button>
+        </a>
       </div>
     </div>
+
+    <p class="text-kom-gray lg:w-[65rem] w-auto lg:mt-4 mt-5 lg:ml-12 ml-0 text-center md:text-left mb-5">
+      At labore magni ex fuga voluptatum ut rerum cumque eum culpa delectus sit velit voluptatem
+    </p>
 
     <div>
       <img src="assets/images/articles/articles.png" class="w-full" alt="">
