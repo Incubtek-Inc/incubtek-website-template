@@ -8,12 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:komnayah": "ng build && node dist/komnayah/server/server.mjs",
-    "dev:ssr": "ng run komnayah:serve-ssr",
-    "serve:ssr": "node dist/komnayah/server/server.mjs",
-    "build:ssr": "ng build && ng run komnayah:server",
-    "prerender": "ng run komnayah:prerender",
-    "vercel-build": "npm run build:ssr"
+    "serve:ssr:komnayah": "ng build && node dist/komnayah/server/server.mjs"
   },
   "private": true,
   "dependencies": {
