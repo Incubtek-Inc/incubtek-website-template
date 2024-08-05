@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/komnayah",
-            "index": "src/index1.html",
+            "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
@@ -33,7 +33,7 @@
             "styles": ["src/styles.scss"],
             "scripts": ["node_modules/preline/dist/preline.js"],
             "server": "src/main.server.ts",
-            "prerender": false,
+            "prerender": true,
             "ssr": {
               "entry": "server.ts"
             }
