@@ -46,8 +46,8 @@ export class NosServicesComponent {
           name: 'Avantage 4',
         },
       ],
-      illustration: 'assets/images/nos-services/digital_illustration.jpg',
-      presentationImage: 'assets/images/nos-services/digital_bg.jpg',
+      illustration: 'assets/images/nos-services/frame_001.png',
+      presentationImage: 'assets/images/nos-services/presentation_001.png',
     },
     {
       id: 2,
@@ -72,8 +72,8 @@ export class NosServicesComponent {
           name: 'Avantage 4',
         },
       ],
-      illustration: 'assets/images/nos-services/media_illustration.png',
-      presentationImage: 'assets/images/nos-services/media_presentation.jpg',
+      illustration: 'assets/images/nos-services/frame_002.png',
+      presentationImage: 'assets/images/nos-services/presentation_002.png',
     },
     {
       id: 3,
@@ -98,8 +98,8 @@ export class NosServicesComponent {
           name: 'Avantage 4',
         },
       ],
-      illustration: 'assets/images/nos-services/digital_illustration.jpg',
-      presentationImage: 'assets/images/nos-services/digital_bg.jpg',
+      illustration: 'assets/images/nos-services/frame_003.png',
+      presentationImage: 'assets/images/nos-services/presentation_003.png',
     },
     {
       id: 4,
@@ -124,8 +124,8 @@ export class NosServicesComponent {
           name: 'Avantage 4',
         },
       ],
-      illustration: 'assets/images/nos-services/media_illustration.png',
-      presentationImage: 'assets/images/nos-services/media_presentation.jpg',
+      illustration: 'assets/images/nos-services/frame_004.png',
+      presentationImage: 'assets/images/nos-services/presentation_004.png',
     },
     {
       id: 5,
@@ -150,8 +150,8 @@ export class NosServicesComponent {
           name: 'Avantage 4',
         },
       ],
-      illustration: 'assets/images/nos-services/digital_illustration.jpg',
-      presentationImage: 'assets/images/nos-services/digital_bg.jpg',
+      illustration: 'assets/images/nos-services/frame_005.png',
+      presentationImage: 'assets/images/nos-services/presentation_005.png',
     },
     {
       id: 6,
@@ -176,8 +176,8 @@ export class NosServicesComponent {
           name: 'Avantage 4',
         },
       ],
-      illustration: 'assets/images/nos-services/media_illustration.png',
-      presentationImage: 'assets/images/nos-services/media_presentation.jpg',
+      illustration: 'assets/images/nos-services/frame_006.png',
+      presentationImage: 'assets/images/nos-services/presentation_006.png',
     },
   ];
 }
