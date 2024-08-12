@@ -50,6 +50,7 @@ module.exports = {
         "kom-footer-pattern": "url('assets/images/footer_bg.png')",
         "kom-projet-pattern": "url('assets/images/new_projet.png')",
       },
+      display: ["group-hover"],
     },
   },
   plugins: [require("preline/plugin")],

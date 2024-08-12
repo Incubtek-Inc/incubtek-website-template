@@ -36,11 +36,12 @@ import { RouterLink } from '@angular/router';
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="lucide lucide-arrow-right hidden group-hover:inline ml-3"
+        class="lucide lucide-arrow-right hidden group-hover:block ml-3"
       >
         <path d="M5 12h14" />
         <path d="m12 5 7 7-7 7" />
       </svg>
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -51,7 +52,7 @@ import { RouterLink } from '@angular/router';
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="lucide lucide-arrow-up-right group-hover:invisible ml-3"
+        class="lucide lucide-arrow-up-right visible group-hover:invisible ml-3"
       >
         <path d="M7 7h10v10" />
         <path d="M7 17 17 7" />
