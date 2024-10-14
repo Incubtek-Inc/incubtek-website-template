@@ -1,5 +1,5 @@
 {
-  "name": "website-template",
+  "name": "website-cca-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:website-template": "ng build && node dist/website-template/server/server.mjs"
+    "serve:ssr:website-cca-app": "ng build && node dist/website-cca-app/server/server.mjs"
   },
   "private": true,
   "dependencies": {

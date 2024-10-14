@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "komnayah": {
+    "website-cca-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/website-template",
+            "outputPath": "dist/website-cca-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "website-template:build:production"
+              "buildTarget": "website-cca-app:build:production"
             },
             "development": {
-              "buildTarget": "website-template:build:development"
+              "buildTarget": "website-cca-app:build:development"
             }
           },
           "defaultConfiguration": "development"
